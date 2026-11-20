@@ -1,0 +1,111 @@
+UTC start: 2026-11-19 11:31:36 UTC
+Five-gene exploratory analysis; not the disease-specific DEG enrichment.
+GO BP: enrichGO, BH, pvalueCutoff 0.05, qvalueCutoff 0.2, readable TRUE.
+KEGG: enrichKEGG, organism hsa, BH, pvalueCutoff 0.05; package defaults otherwise.
+No explicit universe was supplied: database/package defaults apply.
+No GO archive reference identified; KEGG reference is a saved object, not re-analysis.
+Online KEGG is time-dependent; inspect differences without tuning to historical results.
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=Russian_Kazakhstan.utf8  LC_CTYPE=Russian_Kazakhstan.utf8   
+[3] LC_MONETARY=Russian_Kazakhstan.utf8 LC_NUMERIC=C                       
+[5] LC_TIME=Russian_Kazakhstan.utf8    
+
+time zone: Asia/Qyzylorda
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] caret_7.0-1    lattice_0.22-9 ggplot2_4.0.3 
+
+loaded via a namespace (and not attached):
+  [1] splines_4.6.1               ggplotify_0.1.3            
+  [3] tibble_3.3.1                polyclip_1.10-7            
+  [5] hardhat_1.4.3               preprocessCore_1.74.0      
+  [7] enrichit_0.2.1              pROC_1.19.1                
+  [9] XML_3.99-0.24               rpart_4.1.27               
+ [11] lifecycle_1.0.5             httr2_1.3.0                
+ [13] fastcluster_1.3.0           doParallel_1.0.17          
+ [15] globals_0.20.0              processx_3.9.0             
+ [17] MASS_7.3-65                 backports_1.5.1            
+ [19] magrittr_2.0.5              limma_3.68.4               
+ [21] Hmisc_5.3-0                 rmarkdown_2.32             
+ [23] yaml_2.3.12                 otel_0.2.0                 
+ [25] ggtangle_0.1.2              DBI_1.3.0                  
+ [27] RColorBrewer_1.1-3          lubridate_1.9.5            
+ [29] abind_1.4-8                 GenomicRanges_1.64.0       
+ [31] purrr_1.2.2                 BiocGenerics_0.58.1        
+ [33] yulab.utils_0.2.5           nnet_7.3-20                
+ [35] tweenr_2.0.3                rappdirs_0.3.4             
+ [37] ipred_0.9-16                aisdk_1.4.12               
+ [39] gdtools_0.5.1               lava_1.10                  
+ [41] IRanges_2.46.0              S4Vectors_0.50.1           
+ [43] enrichplot_1.32.0           ggrepel_0.9.8              
+ [45] listenv_1.1.0               tidytree_0.4.8             
+ [47] rentrez_1.2.4               parallelly_1.48.0          
+ [49] codetools_0.2-20            DelayedArray_0.38.2        
+ [51] ggforce_0.5.0               DOSE_4.6.0                 
+ [53] xml2_1.6.0                  tidyselect_1.2.1           
+ [55] aplot_0.3.1                 farver_2.1.2               
+ [57] matrixStats_1.5.0           stats4_4.6.1               
+ [59] dynamicTreeCut_1.63-1       base64enc_0.1-6            
+ [61] Seqinfo_1.2.0               jsonlite_2.0.0             
+ [63] Formula_1.2-6               survival_3.8-6             
+ [65] iterators_1.0.14            systemfonts_1.3.2          
+ [67] foreach_1.5.2               tools_4.6.1                
+ [69] ggnewscale_0.5.2            treeio_1.36.1              
+ [71] Rcpp_1.1.2                  glue_1.8.1                 
+ [73] prodlim_2026.03.11          gridExtra_2.3.1            
+ [75] SparseArray_1.12.2          xfun_0.60                  
+ [77] qvalue_2.44.0               MatrixGenerics_1.24.0      
+ [79] dplyr_1.2.1                 withr_3.0.3                
+ [81] fastmap_1.2.0               callr_3.8.0                
+ [83] digest_0.6.39               timechange_0.4.0           
+ [85] R6_2.6.1                    gridGraphics_0.5-1         
+ [87] colorspace_2.1-3            GO.db_3.23.1               
+ [89] RSQLite_3.53.3              tidyr_1.3.2                
+ [91] generics_0.1.4              fontLiberation_0.1.0       
+ [93] data.table_1.18.6.1         recipes_1.4.0              
+ [95] class_7.3-23                httr_1.4.9                 
+ [97] htmlwidgets_1.6.4           S4Arrays_1.12.0            
+ [99] scatterpie_0.2.6            ModelMetrics_1.2.2.2       
+[101] pkgconfig_2.0.3             gtable_0.3.6               
+[103] timeDate_4052.112           blob_1.3.0                 
+[105] S7_0.2.2                    impute_1.86.0              
+[107] XVector_0.52.0              clusterProfiler_4.20.0     
+[109] htmltools_0.5.9             fontBitstreamVera_0.1.1    
+[111] scales_1.4.0                Biobase_2.72.0             
+[113] png_0.1-9                   gower_1.0.2                
+[115] ggfun_0.2.1                 knitr_1.52                 
+[117] rstudioapi_0.19.0           tzdb_0.5.0                 
+[119] reshape2_1.4.5              checkmate_2.3.4            
+[121] nlme_3.1-169                org.Hs.eg.db_3.23.1        
+[123] cachem_1.1.0                stringr_1.6.0              
+[125] parallel_4.6.1              foreign_0.8-91             
+[127] AnnotationDbi_1.74.0        GEOquery_2.80.0            
+[129] pillar_1.11.1               grid_4.6.1                 
+[131] vctrs_0.7.3                 tidydr_0.0.6               
+[133] cluster_2.1.8.2             htmlTable_2.5.0            
+[135] evaluate_1.0.5              readr_2.2.0                
+[137] cli_3.6.6                   compiler_4.6.1             
+[139] rlang_1.3.0                 crayon_1.5.3               
+[141] future.apply_1.21.0         plyr_1.8.9                 
+[143] fs_2.1.0                    ggiraph_0.9.6              
+[145] stringi_1.8.9               WGCNA_1.74                 
+[147] Biostrings_2.80.1           lazyeval_0.2.3             
+[149] GOSemSim_2.38.3             fontquiver_0.2.1           
+[151] Matrix_1.7-5                hms_1.1.4                  
+[153] patchwork_1.3.2             bit64_4.8.6                
+[155] future_1.80.0               KEGGREST_1.52.2            
+[157] statmod_1.5.2               SummarizedExperiment_1.42.0
+[159] igraph_2.3.3                memoise_2.0.1              
+[161] ggtree_4.2.0                bit_4.6.0                  
+[163] gson_0.2.1                  ape_5.8-1                  

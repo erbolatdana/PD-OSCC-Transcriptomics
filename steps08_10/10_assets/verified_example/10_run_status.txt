@@ -1,0 +1,3 @@
+COMPLETED
+Historical and current KEGG results must be compared; GO has no historical reference.
+This analysis uses five selected genes and is separate from Step 04 DEG enrichment.

@@ -1,0 +1,149 @@
+================================================================================
+08_mutation_survival_METHODS.txt
+PD-OSCC Bioinformatic Analysis - Step 08
+Somatic alterations and survival analyses using cBioPortal and GEPIA2
+================================================================================
+
+PURPOSE AND REPRODUCIBILITY STATUS
+
+This stage was performed using web-based tools; no local R computation was
+used for the original analyses. The instructions below document the settings
+and results recovered from the study records. They support review of the
+reported results, but do not by themselves guarantee exact reproduction.
+Some original query settings, data exports and access dates remain unverified.
+Do not infer unrecorded parameters or tune a new query to match the results.
+
+Five selected genes:
+    CXCL1, CXCL6, CXCR4, RGS1, CHST2
+
+================================================================================
+PART A - SOMATIC ALTERATIONS AND ONCOPRINT (cBioPortal)
+================================================================================
+
+Platform: https://www.cbioportal.org
+Study: Head and Neck Squamous Cell Carcinoma (TCGA, PanCancer Atlas)
+Study ID: hnsc_tcga_pan_can_atlas_2018
+Study URL: https://www.cbioportal.org/study?id=hnsc_tcga_pan_can_atlas_2018
+Reported cohort: 496 samples. The sample-to-patient mapping and the exact
+eligibility criteria and denominators for each result require verification.
+
+Documented workflow:
+    1. Select the study by the study ID above.
+    2. Query CXCL1, CXCL6, CXCR4, RGS1 and CHST2.
+    3. View the OncoPrint and the alteration-status survival comparison.
+
+Original OncoPrint labels in the saved image:
+    Gene       Alteration frequency
+    CXCL1      1.6%
+    CXCL6      1.0%
+    CXCR4      0.6%
+    RGS1       1.4%
+    CHST2      7.0%
+
+The manuscript reports rounded frequencies of 2%, 1%, <1%, 1% and 7%,
+respectively. These are gene-level alteration frequencies, not mutation-only
+frequencies. The saved OncoPrint legend includes mutations, copy-number
+alterations and structural variants. The original selected molecular profiles,
+filters, sample set and query options must be verified from archived settings
+or exports; the image alone does not establish every query parameter.
+
+The sum of the displayed percentages is approximately 11.6%. Adding
+gene-level frequencies counts an individual more than once if they have
+alterations in multiple genes. Consequently, the sum is not an estimate of
+the proportion of unique altered patients. Because displayed frequencies are
+rounded and denominators and sample/patient mapping require verification,
+11.6% should not be presented as an exact bound from the saved image alone.
+The actual unique altered and unaltered proportions should be reported from
+the relevant patient-level export once the denominator is verified.
+
+================================================================================
+PART B - OVERALL SURVIVAL BY ALTERATION STATUS (cBioPortal)
+================================================================================
+
+The archived analysis compares overall survival for cases classified as
+altered versus unaltered under the five-gene query. Verify the exact alteration
+profiles, group definitions, patient eligibility and survival endpoint against
+the original query or exported data before describing them as fully recovered.
+
+The saved survival figure shows:
+    Altered group:   50 cases at risk at time zero
+    Unaltered group: 446 cases at risk at time zero
+    Log-rank p:      0.269
+
+The study record and manuscript additionally report:
+    Altered:   27 events; median overall survival 35.54 months
+    Unaltered: 184 events; median overall survival 57.93 months
+
+The archived methods file reported 95% median-survival intervals of
+26.50 to NA months and 48.20 to 84.49 months, respectively. These medians,
+event counts and intervals are transcribed from the study record; they are not
+independently verified by the saved survival image. The unavailable upper
+interval bound must not be presented as a known value.
+
+In this plotted survival comparison, 446 / 496 is approximately 89.9%.
+This describes the plotted groups. Do not generalize it to a different sample
+set or to all study patients until the underlying case mapping and eligibility
+have been checked.
+
+Interpretation: the reported log-rank test did not detect a statistically
+significant difference. This result does not establish equivalence or the
+absence of an association or prognostic effect.
+
+================================================================================
+PART C - OVERALL SURVIVAL BY EXPRESSION LEVEL (GEPIA2)
+================================================================================
+
+Platform: http://gepia2.cancer-pku.cn
+Documented settings:
+    Module: Survival Analysis
+    Endpoint: Overall Survival
+    Dataset: TCGA-HNSC
+    Grouping: median expression split, high versus low
+    Query: each of the five genes entered separately
+
+Values below are transcribed from the saved individual survival plots:
+
+    Gene   Log-rank p   HR(high)   p(HR)   n(high)   n(low)
+    CXCL1      0.44        1.10      0.44      259      259
+    CXCL6      0.45        1.10      0.45      256      259
+    CXCR4      0.25        0.86      0.25      259      259
+    RGS1       0.84        0.97      0.83      259      259
+    CHST2      0.57        0.93      0.57      257      259
+
+The different group totals are reported as displayed; the reason for the
+differences is not established by the saved figures. The figures support the
+reported p-values and hazard ratios, but do not document every original query
+option or provide individual patient-level expression and survival records.
+Record the original access date, dataset/version, expression source, cutoff
+settings, patient exclusions and any other query settings if evidence is found.
+
+All five reported log-rank p-values exceed 0.05. Non-significance does not
+establish that a prognostic association is absent or clinically negligible.
+
+================================================================================
+RELATIONSHIP BETWEEN THE ANALYSES AND AUDIT MATERIALS
+================================================================================
+
+Part B groups cases by genomic alteration status. Part C groups cases by
+expression level for each gene. These answer different questions, but both
+use TCGA-HNSC data and may include overlapping patients. They must not be
+described as independent cohorts without verifying the patient sets.
+Neither analysis establishes a causal mechanism or the absence of a
+prognostic role.
+
+Recovered study evidence:
+    - Saved OncoPrint image with the five gene-level percentages.
+    - Saved cBioPortal overall-survival image with the plotted group sizes
+      and log-rank p-value.
+    - Five saved individual GEPIA2 survival plots.
+    - Manuscript Methods and Results and the earlier Step 08 methods record.
+
+For an independent audit, preserve the query links or settings, access dates,
+study and profile identifiers, sample/patient selection and relevant exported
+alteration, clinical and survival tables when available. Archive public-source
+data in line with the applicable data-access terms. Exact historical results
+may depend on the database version and settings. A new query should be labelled
+with its access date and should not be presented as the archived analysis.
+
+The Step 08 audit does not rerun or modify the original analysis.
+================================================================================

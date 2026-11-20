@@ -1,0 +1,3 @@
+COMPUTATION_COMPLETED -- this is not a declaration of methodological validity
+All six manuscript result checks match: TRUE
+See power checks, interpretation issues and PPI audit status.

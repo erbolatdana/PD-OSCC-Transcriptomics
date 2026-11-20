@@ -1,0 +1,7 @@
+"Metric","Reported","Observed","Match"
+"PD_non_grey_modules","29","29",TRUE
+"OSCC_non_grey_modules","64","64",TRUE
+"PD_DEG_module_intersection","32","32",TRUE
+"OSCC_DEG_module_intersection","662","662",TRUE
+"Shared_candidate_count","5","5",TRUE
+"Exact_original_panel","TRUE","TRUE",TRUE

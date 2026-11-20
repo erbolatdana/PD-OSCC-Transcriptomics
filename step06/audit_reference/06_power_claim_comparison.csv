@@ -1,0 +1,3 @@
+"Disease","Fixed_historical_beta","Recalculated_R2_at_fixed_beta","Recalculated_slope","Smallest_tested_beta_R2_ge_080","WGCNA_powerEstimate","Fixed_beta_meets_R2_080","Fixed_beta_is_smallest"
+"PD",6,0.825501665688106,-2.07122384231766,6,6,TRUE,TRUE
+"OSCC",3,0.875757590464909,-1.69605387943638,3,3,TRUE,TRUE
