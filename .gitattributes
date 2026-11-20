@@ -2,3 +2,6 @@
 # Preserve their existing bytes across Git checkouts; test after any transfer.
 step07/source/*.R -text
 step07/data_root/** -text
+
+# Preserve binary parts exactly.
+largefiles/*.part* -text
